@@ -1,8 +1,14 @@
-const Layout = ({children}: {children: Readonly<{children: React.ReactNode}>}) => {
+import Header from "@/components/Header"
+
+
+const Layout = ({children}: {children: {children: React.ReactNode}}) => {
     return (
-        <div className="">
-            {children}
-        </div>
+        <main className="min-h-screen text-gray-400">
+            <Header />
+            <div className="container py-10">
+                {children}
+            </div>
+        </main>
     )
 }
 export default Layout
